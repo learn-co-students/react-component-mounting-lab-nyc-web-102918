@@ -9,10 +9,16 @@ class Timer extends Component {
 
   // add your code here
 
+//calls componentDidMount lo debo agregar en ambos archivos
+  componentDidMount() {
+    this.interval = setInterval(this.clockTick, 1000)
+  }
 
 
+  componentWillUnmount() {
+    clearInterval(this.interval)
 
-
+  }
 
 
   render() {
